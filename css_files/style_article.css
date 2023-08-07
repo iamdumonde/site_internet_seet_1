@@ -1,0 +1,92 @@
+/* CSS VARIABLES */
+:root {
+    --clr-primary: #1c83a3;
+    --clr-secondary: #04baf3;
+    --clir-tertiairy: #fff; 
+    --fz-part-title: 7rem;
+  }
+
+
+/* MAIN_ARTICLE */
+
+.main_article .circle_with_letter {
+    position: relative;
+    text-align: center;
+}
+
+.main_article article .a_with_circle {
+    /* display: flex;
+    justify-content: center;
+    align-self: center; */
+    /* width: 180px;
+    height: 180px; */
+    position: relative;
+    border-radius: 50%;
+    padding-inline: 1rem;
+    display: inline-block;
+    font-size: var(--fz-part-title);
+    background-color: var(--clr-secondary);
+    color: var(--clir-tertiairy);
+}
+
+.hero span {
+    font-size: var(--fz-part-title);
+}
+.main_article article .small-circle{
+    width: 4rem;
+    height: 4rem;
+    left: 350px;
+    top: -40px;
+    /* padding: 1.4em 1.4em; */
+    position: relative;
+    border-radius: 50%;
+    /* display: block; */
+    background-color: var(--clr-secondary);
+}
+
+.main_article figure {
+    text-align: center;
+}
+
+.main_article .two_sections {
+    padding-inline: 1rem;
+}
+
+.main_article .two_sections p {
+    padding-left: 1rem;
+    text-align: justify;
+}
+
+.two_sections h2 {
+    color: var(--clr-primary);
+}
+
+@media screen and (min-width: 730px){
+    .main_article .two_sections {
+        margin-top: 2rem;
+        display: flex;
+        flex-basis: 100%;
+        gap: 2.5rem;
+        /* background-color: red; */
+    }
+
+    .main_article .two_sections p {
+        padding-left: 0rem;
+    }
+
+}
+
+@media screen and (min-width: 1200px){
+    .main_article .two_sections {
+        margin-top: 2rem;
+        display: flex;
+        flex-basis: 100%;
+        gap: 2.5rem;
+        /* background-color: red; */
+    }
+
+    .main_article .two_sections p {
+        padding-left: 0rem;
+    }
+
+}
