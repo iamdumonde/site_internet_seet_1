@@ -4,7 +4,7 @@
     .propos-grid{
         display: grid;
         column-gap: 2rem;
-        margin-inline:3rem;
+        margin-inline: 3rem;
     }
 
     .propos-grid img{
@@ -38,7 +38,11 @@
     }
 }
 /* *************Mobile****************** */
-@media screen and (min-width:481px) and (max-width:779px){
+@media screen and (min-width:200px) and (max-width:779px){
+    .propos-grid {
+        margin-inline: 2rem;
+    }
+
     .grid{
         display: flex;
         flex-direction: column;

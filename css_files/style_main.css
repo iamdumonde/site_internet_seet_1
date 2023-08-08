@@ -1,7 +1,8 @@
 /* Reset CSS */
 @import url(../Google-sans/font-face.css);
 @import url(../Metropolis_Fonts/@font-face.css);
-* ,
+
+
 *,
 *::after,
 *::before {
@@ -14,11 +15,6 @@ body {
     line-height: 1.5;
     background-color: #ededed;
     font-family: Metropolis;
-}
-p{
-font-family: ProductSans;
-  margin: 0;
-  padding: 0;
 }
 
 ul {
@@ -38,17 +34,13 @@ img {
 
 .container {
   max-width: 1400px;
-  margin-inline: 0 auto;
+  margin-inline: auto;
 }
 
 /***CSS MAIN***/
 
 /*===============================CSS COMMUN AUX CONTENUS DU MAIN===============================*/
-.main{
-    max-width: 900px;
-    margin-inline:auto;
-}
-.circleG{
+/* .circleG{
     background-image: linear-gradient(to right, #1c83a3, #04baf3);
     height: 80px;
     width: 80px;
@@ -57,8 +49,8 @@ img {
     color: white;
     font-weight: 700;
     font-size:6rem;
-}
-h1,
+} */
+/* h1,
 h2{
     position: relative;
     margin-left: 1rem;
@@ -66,15 +58,15 @@ h2{
     text-align: center;
     margin-bottom: 0;
     margin-top: 1rem;
-}
-.blue{
+} */
+/* .blue{
     color: #1c83a3;
 }
 .blue-light{
     color: #1fa6cf;
-}
+} */
 
-main>p{
+.main_a_propos>p{
     font-weight: 500;
     text-align: center;
     font-size: 1.5rem;
@@ -83,16 +75,20 @@ main>p{
 
 /*==============================A PROPOS==============================*/
 
+.main_a_propos {
+    margin-top: 10rem;
+}
+
 .bordure{
     grid-area:1/1/2/2;
     border-radius: 4rem 3rem 0 0;
     border-top: #1c83a3 solid ;
     border-right: #1c83a3 solid ;
-    padding: 1rem;
+    padding: 3rem 1rem 1rem 1rem;
 }
 
 .para-primo{
-    margin-bottom: 1rem;
+    margin-block: 3rem;
 }
 
 .border{
@@ -100,12 +96,16 @@ main>p{
     width: 100%;
     height: 100%;
     border-radius: 3rem;
-    border-top: #1c83a3 solid ;
+    border-bottom: #1c83a3 solid ;
     border-left: #1c83a3 solid ;
     padding: 1rem;
 }
 .propos-grid{
-    margin-inline: 2rem;  
+    margin-inline: 0rem; 
+}
+
+.propos-grid .bordure {
+    text-align: justify;
 }
 
 .propos-grid p{
@@ -140,12 +140,8 @@ small{
     background-image: #fff;
     color: blue;
 }
-main .para-title{
-    font-size: 0.7rem;
-}
-.para-title{
-    margin-bottom: 1.5rem;
-}
+
+/* Partie grid commenté pour vite tester un display flex */
 .grid img{
     border-radius: 1rem 1rem 0 0;
     width: 100%;
@@ -230,6 +226,14 @@ a.voir{
     justify-content: center;
 }
 
+/* test */
+/* .grid {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        padding: 1.2rem;
+} */
 /*Css du text à afficher au hover**/
 
 

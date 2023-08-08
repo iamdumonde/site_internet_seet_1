@@ -1,7 +1,8 @@
 /* Reset CSS */
 @import url(../Google-sans/font-face.css);
 @import url(../Metropolis_Fonts/@font-face.css);
-@import url(style_article.css);
+@import url(style_main.css);
+@import url(media_query.css);
 
 /* CSS VARIABLES */
 :root {
@@ -107,7 +108,7 @@ img {
   display: none;
   position: absolute;
   right: 20px;
-  width: 35px;
+  width: 25px;
 }
 
 @media screen and (max-width: 900px) {
@@ -171,6 +172,7 @@ img {
 .welcome-container {
   margin-top: 5rem;
 }
+
 .welcome-container .circle_with_letter {
   position: relative;
   text-align: center;
@@ -194,7 +196,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 10vw;
+  font-size: 10rem;
   font-weight: bold;
 }
 
@@ -203,6 +205,7 @@ img {
 }
 
 .welcome-container .text-below {
+  margin-block: 2.5rem;
   color: #000;
 }
 
@@ -244,12 +247,36 @@ img {
   margin-left: 10px;
 }
 
-@media screen and (max-width: 1033px) {
-  .welcome-container .text-below {
-    margin-top: 0px;
-    color: #000;
+/* La responsivité du font-size de la partie Bienvenue */
+@media screen and (max-width: 1040px) {
+  .welcome-container .hero {
+    font-size: 8rem;
   }
+}
+@media screen and (max-width: 900px) {
+  .welcome-container .hero {
+    font-size: 6rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  .welcome-container .hero {
+    font-size: 5rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .welcome-container .hero {
+    font-size: 3.4rem;
+  }
+}
+@media screen and (max-width: 350px) {
+  .welcome-container .hero {
+    font-size: 2rem;
+  }
+}
 
+
+/* ********************************************************* */
+@media screen and (max-width: 1033px) {
   .text-below .span-entreprise {
     font-size: 4vw;
     font-weight: bold;
@@ -269,6 +296,16 @@ img {
 @media screen and (max-width: 675px) {
   .welcome-container .circle-container {
     gap: 10px;
+  }
+
+  .main {
+    margin-inline: 0px;
+    /* text-align: center; */
+  }
+
+  .welcome-container .hero {
+    /* font-size: 8vw; */
+    letter-spacing: 2px;
   }
 }
 
@@ -317,7 +354,9 @@ img {
   display: inline-block;
   font-size: var(--fz-part-title);
   font-weight: bold;
-  background-color: var(--clr-secondary);
+  /* background-color: var(--clr-secondary); */
+  background-image: linear-gradient(to right, #1c83a3, #04baf3);
+
   color: var(--clir-tertiairy);
   vertical-align: super;
 }
@@ -342,6 +381,7 @@ img {
 .main_article .img_section {
   margin-top: 3rem;
 }
+
 .main_article figure {
   text-align: center;
 }
@@ -377,49 +417,170 @@ img {
   background-image: linear-gradient(to right, #1c83a3, #04baf3);
 }
 
+
+/* Taille du font-size des divs avec class 'circle_with_letter */
 @media screen and (max-width: 730px) {
   .main_article .hero span {
-      font-size: 6vw;
+    font-size: 5rem;
   }
-} 
+}
+@media screen and (max-width: 400px) {
+  .main_article .hero span {
+    font-size: 3rem;
+  }
+}
+
+
+
+/*****/
 @media screen and (min-width: 730px) {
   .main_article .two_sections {
-      margin-top: 2rem;
-      display: flex;
-      flex-basis: 100%;
-      gap: 2.5rem;
+    margin-top: 2rem;
+    display: flex;
+    flex-basis: 100%;
+    gap: 2.5rem;
   }
 
   .main_article .two_sections p {
-      padding-left: 0rem;
+    padding-left: 0rem;
   }
 
 }
 
 @media screen and (min-width: 1200px) {
   .main_article .img_section {
-      display: flex;
+    display: flex;
   }
 
   .img_section figure {
-      flex-basis: 40%;
+    flex-basis: 40%;
   }
 
   .img_section .two_sections {
-      flex-basis: 60%;
-      gap: 0;
-      margin-top: 1rem;
+    flex-basis: 60%;
+    gap: 0;
+    margin-top: 1rem;
   }
 
   .main_article .two_sections {
-      flex-direction: column;
+    flex-direction: column;
   }
 
 
   .main_article .two_sections p {
-      padding-left: 1rem;
-      padding-right: 4rem;
-      margin-block: 5px;
+    padding-left: 1rem;
+    padding-right: 4rem;
+    margin-block: 5px;
   }
 
+}
+
+
+/************************* A_propos title CSS ***********************************/
+.main_a_propos .circle_with_letter {
+  position: relative;
+  text-align: center;
+}
+
+.main_a_propos .a_with_circle {
+  position: relative;
+  border-radius: 50%;
+  width: 10rem;
+  height: 10rem;
+  display: inline-block;
+  font-size: var(--fz-part-title);
+  font-weight: bold;
+  /* background-color: var(--clr-secondary); */
+  background-image: linear-gradient(to right, #1c83a3, #04baf3);
+
+  color: var(--clir-tertiairy);
+  vertical-align: super;
+}
+
+.main_a_propos .hero span {
+  font-size: var(--fz-part-title);
+  color: var(--clr-secondary);
+  font-weight: bold;
+}
+
+.main_a_propos .small-circle {
+  width: 4rem;
+  height: 4rem;
+  left: 1px;
+  top: 115px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: var(--clr-secondary);
+}
+
+/* Taille du font-size des divs avec class 'circle_with_letter */
+@media screen and (max-width: 730px) {
+  .main_a_propos .hero span {
+    font-size: 5rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  .main_a_propos .hero span {
+    font-size: 3rem;
+  }
+}
+
+
+
+
+/************************* Galerie title CSS ***********************************/
+.main_galerie {
+  margin-top: 4rem;
+}
+.main_galerie .circle_with_letter {
+  position: relative;
+  text-align: center;
+}
+
+.main_galerie .a_with_circle {
+  position: relative;
+  border-radius: 50%;
+  width: 10rem;
+  height: 10rem;
+  display: inline-block;
+  font-size: var(--fz-part-title);
+  font-weight: bold;
+  background-image: linear-gradient(to right, #1c83a3, #04baf3);
+  color: var(--clir-tertiairy);
+  vertical-align: super;
+}
+
+.main_galerie .hero span {
+  font-size: var(--fz-part-title);
+  color: var(--clr-secondary);
+  font-weight: bold;
+}
+
+.main_galerie .small-circle {
+  width: 4rem;
+  height: 4rem;
+  left: 1px;
+  top: 115px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: var(--clr-secondary);
+}
+
+/* Taille du font-size des divs avec class 'circle_with_letter */
+@media screen and (max-width: 730px) {
+  .main_galerie .hero span {
+    font-size: 5rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  .main_galerie .hero span {
+    font-size: 3rem;
+  }
+}
+
+
+.para-title {
+  margin-block: 2rem;
+  font-size: 1.3rem;
+  font-weight: 700;
 }
