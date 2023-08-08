@@ -19,6 +19,7 @@ p{
     font-family: ProductSans;
   margin: 0;
   padding: 0;
+  font-size: 16px;
   line-height: 1.5;
   background-color: #ededed;
 }
@@ -40,12 +41,12 @@ img {
 
 .container {
   max-width: 1400px;
-  margin-inline: 0 auto;
+  margin-inline: auto;
 }
 
 /* HEADER */
 .header {
-  width: 100vw;
+  width: 100%;
   padding: 50px;
 }
 
@@ -71,7 +72,10 @@ img {
 
 .nav-links a {
   color: #fff;
+  padding: 0.2em 0.6em;
   white-space: nowrap;
+  border-radius: 20px;
+  transition: 0.5s;
 }
 
 .navbar .nav-links ul {
@@ -84,6 +88,11 @@ img {
   font-weight: bold;
 }
 
+.navbar .nav-links ul li a:hover {
+  background-color: #e1e1e1;
+  color: #1d81a2;
+}
+
 .navbar .nav-links ul li.active-page a {
   padding: 0.2em 0.6em;
   border-radius: 20px;
@@ -92,6 +101,31 @@ img {
 }
 
 .navbar .menu-hamburger {
+<<<<<<< HEAD
+  display: none;
+  position: absolute;
+  right: 80px;
+  width: 35px;
+}
+
+@media screen and (max-width: 900px) {
+  /* HEADER */
+  .navbar .nav-links {
+    /* height: 100vh; */
+    position: absolute;
+    top: 115px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-left: -100%;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    background-color: #1c83a3;
+    transition: all 0.5s ease-in-out;
+  }
+=======
     /* display: none; */
     width: 35px;
     color: #000;
@@ -106,6 +140,7 @@ img {
 *::before {
   box-sizing: border-box;
 }
+>>>>>>> 1b0c4081a07df1aaf5f9a3b15cfd74d3d7225b49
 
 body {
     margin: 0;
@@ -148,6 +183,168 @@ img {
   padding: 50px;
 }
 
+<<<<<<< HEAD
+/* MAIN */
+/* WELCOME-CONTAINER */
+.main {
+  margin-inline: 50px;
+  text-align: center;
+}
+
+.main .welcome-container {
+  position: relative;
+  margin-top: 60px;
+}
+
+.welcome-container .circle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 34px;
+}
+
+.circle-container .no-circle {
+  margin-right: 10px;
+  color: #1494bd;
+}
+
+.circle-container .div_with_circle {
+  display: flex;
+}
+
+.circle-container .circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11em;
+  font-weight: 900;
+}
+
+.circle-container .big-circle {
+  width: 270px;
+  height: 270px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #1494bd;
+  color: #fff;
+}
+
+.circle-container .exclamation {
+  color: #1494bd;
+}
+
+.welcome-container .text-below {
+  margin-top: -50px;
+  color: #000;
+}
+
+.text-below .span-sur {
+  font-size: 2em;
+}
+
+.text-below .span-entreprise {
+  margin-right: 10px;
+  text-transform: uppercase;
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+/*  */
+/* Découvrir btn */
+.decouvrir {
+  display: inline-block;
+  margin-top: 130px;
+}
+
+.decouvrir .btn-decouvrir {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #04baf3;
+  padding: 0.4em 0.4em;
+  font-size: 3vw;
+  font-weight: bold;
+  border-radius: 50px;
+  color: #ededed;
+}
+
+.cercle {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #e6e6e6;
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 1033px) {
+  .circle-container .circle {
+    font-size: 12vw;
+  }
+
+  .circle-container .no-circle {
+    margin-right: 2px;
+  }
+
+  .circle-container .big-circle {
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+    object-fit: contain;
+    /* margin-right: auto; */
+    color: #1494bd;
+  }
+
+  .welcome-container .text-below {
+    margin-top: 0px;
+    color: #000;
+  }
+
+  .text-below .span-entreprise {
+    font-size: 4vw;
+    font-weight: bold;
+  }
+
+  .text-below .span-sur {
+    font-size: 3vw;
+  }
+}
+
+@media screen and (max-width: 985px) {
+  .welcome-container .circle-container {
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 675px) {
+  .welcome-container .circle-container {
+    gap: 10px;
+  }
+}
+
+
+/* FOOTER */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  background-image: linear-gradient(to right, #1c83a3, #04baf3);
+}
+
+.footer .copyright {
+  font-weight: 500;
+  color: #000;
+}
+
+.footer .hu {
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #000;
+}
+=======
 .header .navbar {
   display: flex;
   justify-content: space-between;
@@ -196,3 +393,4 @@ img {
     color: #000;
 }
 
+>>>>>>> 1b0c4081a07df1aaf5f9a3b15cfd74d3d7225b49
