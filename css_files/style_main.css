@@ -80,57 +80,6 @@ main>p{
     font-size: 1.5rem;
 }
 
-/*==========================MON MEDIA QUERY==========================*/
-
-
-/* *************TABLETTE****************** */
-@media screen and (min-width:780px) and (max-width:978px) {
-
-}
-/* *******Mobile******** */
-@media screen and (max-width:779px) {
-.propos-grid{
-    display: flex;
-    flex-direction: column;
-}
-
-.grid{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 2rem;
-    grid-row-gap: 1.5rem;
-}
-.grid1{
-    grid-area: 1 / 2 ;
-
-}
-.grid2{
-    grid-area: 2 / 2 ;
-}
-.grid3{
-    grid-area: 1 / 3 ;
-}
-.grid4{
-    grid-area: 1 / 2 ;
-}
-.grid5{
-    grid-area: 2 / 3 ;
-}
-.grid6{
-    grid-area: 3 / 3 ;
-}
-.grid7{
-    grid-area: 3 / 2 / 4 / 3; 
-}
-.grid8{
-    grid-area: 3 / 1 / 4 / 2; 
-}
-.grid9{
-    grid-area: 2 / 1 / 3 / 2;
-}
-
-}
 
 /*==============================A PROPOS==============================*/
 
@@ -145,11 +94,6 @@ main>p{
 .para-primo{
     margin-bottom: 1rem;
 }
-.propos-grid{
-    display: grid;
-    column-gap: 2rem;
-    margin-inline:2rem;
-}
 
 .border{
     grid-area: 1/2;
@@ -160,7 +104,13 @@ main>p{
     border-left: #1c83a3 solid ;
     padding: 1rem;
 }
+.propos-grid{
+    margin-inline: 2rem;  
+}
 
+.propos-grid p{
+    margin-bottom: 1.5rem;
+}
 .propos-grid img{
     width: 100%;
 }
@@ -170,6 +120,7 @@ main>p{
     display: flex;
     flex-direction: column;
     margin-inline: 1rem;
+    overflow: hidden;
 }
 small{
     color: #1d81a2;
@@ -182,8 +133,13 @@ small{
     border-radius: 1rem;
     background-image: linear-gradient(to right, #1c83a3, #04baf3);
     border: none;
+    transition: all 2s;
 }
 
+.voir:hover{
+    background-image: #fff;
+    color: blue;
+}
 main .para-title{
     font-size: 0.7rem;
 }
@@ -193,11 +149,12 @@ main .para-title{
 .grid img{
     border-radius: 1rem 1rem 0 0;
     width: 100%;
+    transition: all 2s;
 }
-/* .border-bottom{
-    background-image: linear-gradient(to right, #1c83a3, #04baf3);
-    color: #1d81a2;
-} */
+.grid img:hover{
+    opacity: .5;
+}
+
 
 /* Le grid*/
 .grid{
@@ -243,12 +200,24 @@ main .para-title{
     margin-top: 0.2rem;
     border-radius:0 0 0.5rem 0.5rem;
     text-align: center;
+}
 
+.bottom-tense a:hover{
+    color:blue;
+    background-color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    transform: scaleX(1);
 }
 .bottom-tense a{
+    transition: all 3s;
     color: white;
     font-family: ProductSans;
     font-size: 0.7rem;
+    transform: scaleX(0.25);
+}
+.flex{
+    position: relative;
 }
 .flex img{
     box-shadow: 5px 10px 5px #ccc;
@@ -260,3 +229,21 @@ a.voir{
     display: flex;
     justify-content: center;
 }
+
+/*Css du text à afficher au hover**/
+
+
+.flex:hover .hidden {
+    opacity: 0.8;
+  }
+  .hidden{
+    position: absolute;
+    top: 2rem;
+    left: 1rem;
+    font-weight: 700;
+    font-size: 1rem;
+    opacity: 0;
+    transition: all 1s;
+    }
+
+    
