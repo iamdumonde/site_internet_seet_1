@@ -232,22 +232,11 @@ img {
   justify-content: center;
   align-items: center;
   background-color: #04baf3;
-  padding: 0.2rem 0.9rem;
+  padding: 0.2rem 0.2rem;
   font-size: 1.5rem;
   font-weight: bold;
   border-radius: 50px;
   color: #ededed;
-}
-
-.btn-decouvrir .cercle img {
-  width: 80%;
-
-}
-
-.btn-decouvrir .cercle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .cercle {
